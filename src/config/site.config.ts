@@ -67,57 +67,116 @@ export const defaultSiteConfig: SiteConfig = {
   },
 
   navigation: [
-    { id: "summer", label: { en: "Summer", ar: "الصيف" }, href: "/c/summer" },
-    { id: "sale", label: { en: "Sale", ar: "التخفيضات" }, href: "/offers", highlight: false },
-    { id: "beauty", label: { en: "Beauty", ar: "الجمال" }, href: "/c/beauty" },
     {
-      id: "clothing",
-      label: { en: "Clothing", ar: "الملابس" },
-      href: "/c/clothing",
+      id: "women",
+      label: { en: "Women", ar: "النساء" },
+      href: "/c/women",
       columns: [
         {
-          heading: { en: "Tops", ar: "الأعلى" },
+          heading: { en: "Clothing", ar: "الملابس" },
           links: [
-            { label: { en: "Tops & T-Shirts", ar: "التيشيرتات" }, href: "/c/clothing/tops" },
-            { label: { en: "Shirts", ar: "القمصان" }, href: "/c/clothing/shirts" },
-            { label: { en: "Blouses", ar: "البلوزات" }, href: "/c/clothing/blouses" },
-          ],
-        },
-        {
-          heading: { en: "Dresses", ar: "الفساتين" },
-          links: [
-            { label: { en: "Maxi Dresses", ar: "الفساتين الطويلة" }, href: "/c/clothing/maxi" },
-            { label: { en: "Midi Dresses", ar: "الفساتين المتوسطة" }, href: "/c/clothing/midi" },
+            { label: { en: "Two-Piece Sets", ar: "أطقم قطعتين" }, href: "/c/women/women-two-piece-sets" },
+            { label: { en: "Shirts & T-Shirts", ar: "القمصان والتيشيرتات" }, href: "/c/women/women-shirts-tshirts" },
+            { label: { en: "Jeans", ar: "الجينز" }, href: "/c/women/women-jeans" },
+            { label: { en: "Pants", ar: "البناطيل" }, href: "/c/women/women-pants" },
+            { label: { en: "Dresses", ar: "الفساتين" }, href: "/c/women/women-dresses" },
+            { label: { en: "Evening Suits", ar: "بدل سهرة" }, href: "/c/women/women-evening-suits" },
+            { label: { en: "Skirts", ar: "التنانير" }, href: "/c/women/women-skirts" },
+            { label: { en: "Sweaters", ar: "البلوفرات" }, href: "/c/women/women-sweaters" },
+            { label: { en: "Coats & Jackets", ar: "المعاطف والجاكيتات" }, href: "/c/women/women-coats-jackets" },
+            { label: { en: "Sleepwear & Pajamas", ar: "ملابس النوم والبيجامات" }, href: "/c/women/women-sleepwear-pajamas" },
+            { label: { en: "Activewear", ar: "ملابس رياضية" }, href: "/c/women/women-activewear" },
+            { label: { en: "Swimwear", ar: "ملابس البحر" }, href: "/c/women/women-swimwear" },
+            { label: { en: "Shorts", ar: "الشورتات" }, href: "/c/women/women-shorts" },
           ],
         },
       ],
     },
-    { id: "home", label: { en: "Home", ar: "المنزل" }, href: "/c/home" },
-    { id: "kaftans", label: { en: "Kaftans", ar: "القفاطين" }, href: "/c/kaftans" },
-    { id: "shoes-bags", label: { en: "Shoes & Bags", ar: "الأحذية والحقائب" }, href: "/c/shoes-bags" },
     {
-      id: "jewelry",
-      label: { en: "Jewelry", ar: "المجوهرات" },
-      href: "/c/jewelry",
+      id: "men",
+      label: { en: "Men", ar: "الرجال" },
+      href: "/c/men",
       columns: [
         {
+          heading: { en: "Clothing", ar: "الملابس" },
           links: [
-            { label: { en: "Necklaces", ar: "القلائد" }, href: "/c/jewelry/necklaces" },
-            { label: { en: "Earrings & Ear Cuffs", ar: "الأقراط" }, href: "/c/jewelry/earrings" },
+            { label: { en: "Shirts", ar: "القمصان" }, href: "/c/men/men-shirts" },
+            { label: { en: "T-Shirts", ar: "التيشيرتات" }, href: "/c/men/men-tshirts" },
+            { label: { en: "Jeans", ar: "الجينز" }, href: "/c/men/men-jeans" },
+            { label: { en: "Pants", ar: "البناطيل" }, href: "/c/men/men-pants" },
+            { label: { en: "Coordinated Sets", ar: "أطقم منسقة" }, href: "/c/men/men-coordinated-sets" },
+            { label: { en: "Sweaters", ar: "البلوفرات" }, href: "/c/men/men-sweaters" },
+            { label: { en: "Coats & Jackets", ar: "المعاطف والجاكيتات" }, href: "/c/men/men-coats-jackets" },
+            { label: { en: "Sleepwear", ar: "ملابس النوم" }, href: "/c/men/men-sleepwear" },
+            { label: { en: "Pajamas", ar: "بجامات" }, href: "/c/men/men-pajamas" },
+            { label: { en: "Activewear", ar: "ملابس رياضية" }, href: "/c/men/men-activewear" },
+            { label: { en: "Swimwear", ar: "ملابس البحر" }, href: "/c/men/men-swimwear" },
+            { label: { en: "Shorts", ar: "الشورتات" }, href: "/c/men/men-shorts" },
           ],
-        },
-        {
-          links: [
-            { label: { en: "Rings", ar: "الخواتم" }, href: "/c/jewelry/rings" },
-            { label: { en: "Bracelets & Anklets", ar: "الأساور والخلاخيل" }, href: "/c/jewelry/bracelets" },
-          ],
-        },
-        {
-          links: [{ label: { en: "Sunglasses", ar: "النظارات الشمسية" }, href: "/c/jewelry/sunglasses" }],
         },
       ],
     },
-    { id: "brands", label: { en: "Brands", ar: "العلامات التجارية" }, href: "/brands", highlight: true },
+    {
+      id: "kids",
+      label: { en: "Kids", ar: "الأطفال" },
+      href: "/c/kids",
+      columns: [
+        {
+          heading: { en: "Sets, Clothing & Essentials", ar: "الاطقم والملابس والمستلزمات" },
+          links: [
+            { label: { en: "Infants", ar: "الأطفال الرضع" }, href: "/c/kids/kids-infants" },
+            { label: { en: "Boys", ar: "الأولاد" }, href: "/c/kids/kids-boys" },
+            { label: { en: "Girls", ar: "البنات" }, href: "/c/kids/kids-girls" },
+          ],
+        },
+        {
+          links: [
+            { label: { en: "Bags, Accessories & Shoes", ar: "الشنط والاكسسوارات والاحذية" }, href: "/c/kids/kids-bags-accessories-shoes" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "home-decor",
+      label: { en: "Home & Decor", ar: "المنزل والزينة" },
+      href: "/c/home-decor",
+      columns: [
+        {
+          links: [
+            { label: { en: "Vases", ar: "الفازات والمزهريات" }, href: "/c/home-decor/home-vases" },
+            { label: { en: "Plates & Bowls", ar: "الأطباق والأوعية" }, href: "/c/home-decor/home-plates-bowls" },
+            { label: { en: "Serving Dishes", ar: "أواني تقديم الطعام" }, href: "/c/home-decor/home-serving-dishes" },
+            { label: { en: "Coffee & Tea Cups", ar: "فناجين القهوة والشاي" }, href: "/c/home-decor/home-coffee-tea-cups" },
+            { label: { en: "Table Linens", ar: "مفارش الطاولات" }, href: "/c/home-decor/home-table-linens" },
+          ],
+        },
+        {
+          links: [
+            { label: { en: "Coffee Table Decor", ar: "زينة لطاولة القهوة" }, href: "/c/home-decor/home-coffee-table-decor" },
+            { label: { en: "Bedding, Duvet & Pillow Covers", ar: "اغطية وسائد وألحفة السرير وأغطية اللحاف" }, href: "/c/home-decor/home-bedding-duvet-covers" },
+            { label: { en: "Photo Albums & Frames", ar: "ألبومات وإطارات الصور" }, href: "/c/home-decor/home-photo-albums-frames" },
+            { label: { en: "Sculptures & Decorative Bowls", ar: "المنحوتات والأوعية الزخرفية" }, href: "/c/home-decor/home-sculptures-decorative-bowls" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "beauty-corner",
+      label: { en: "Beauty Corner", ar: "ركن الجمال" },
+      href: "/c/beauty-corner",
+      columns: [
+        {
+          links: [
+            { label: { en: "Perfumes", ar: "العطور" }, href: "/c/beauty-corner/beauty-perfumes" },
+            { label: { en: "Makeup", ar: "الميك أب" }, href: "/c/beauty-corner/beauty-makeup" },
+            { label: { en: "Lotion", ar: "اللوشن" }, href: "/c/beauty-corner/beauty-lotion" },
+            { label: { en: "Bakhoor (Incense)", ar: "البخور" }, href: "/c/beauty-corner/beauty-bakhoor" },
+            { label: { en: "Home Fragrances", ar: "معطرات المنزل" }, href: "/c/beauty-corner/beauty-home-fragrances" },
+            { label: { en: "Hair Tools", ar: "اجهزة الشعر" }, href: "/c/beauty-corner/beauty-hair-tools" },
+          ],
+        },
+      ],
+    },
   ],
 
   homeSections: [

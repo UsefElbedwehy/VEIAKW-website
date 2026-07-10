@@ -5,9 +5,9 @@ const repo = new MockCatalogRepository();
 
 describe("MockCatalogRepository.queryProducts", () => {
   it("filters by category slug", async () => {
-    const { items } = await repo.queryProducts({ categorySlug: "shirts" });
+    const { items } = await repo.queryProducts({ categorySlug: "women-shirts-tshirts" });
     expect(items.length).toBeGreaterThan(0);
-    expect(items.every((p) => p.categoryIds.includes("c-shirts"))).toBe(true);
+    expect(items.every((p) => p.categoryIds.includes("c-women-shirts-tshirts"))).toBe(true);
   });
 
   it("filters by brand slug", async () => {
