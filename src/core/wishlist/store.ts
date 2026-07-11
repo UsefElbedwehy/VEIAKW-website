@@ -49,6 +49,6 @@ export const useWishlist = create<WishlistState>()(
           return additions.length ? { items: [...state.items, ...additions] } : state;
         }),
     }),
-    { name: "thouqi-wishlist" },
+    { name: "veiakw-wishlist" },
   ),
 );

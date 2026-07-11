@@ -14,7 +14,7 @@ export type LocaleCode = string;
 export type LocalizedText = Record<LocaleCode, string>;
 
 export interface BrandColors {
-  /** Primary brand color (deep red for Thouqi). */
+  /** Primary brand color (deep burgundy for VEÍAKW). */
   primary: string;
   primaryForeground: string;
   /** Accent used for sale / promotional highlights. */

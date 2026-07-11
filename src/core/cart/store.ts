@@ -66,6 +66,6 @@ export const useCart = create<CartState>()(
       count: () => get().lines.reduce((n, l) => n + l.quantity, 0),
       subtotal: () => get().lines.reduce((s, l) => s + l.price * l.quantity, 0),
     }),
-    { name: "thouqi-cart" },
+    { name: "veiakw-cart" },
   ),
 );

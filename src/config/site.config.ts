@@ -63,7 +63,7 @@ export const defaultSiteConfig: SiteConfig = {
   social: {
     instagram: "https://instagram.com/veia.kw",
     tiktok: "https://tiktok.com/@veiakw",
-    snapchat: "https://snapchat.com/add/thouqi",
+    snapchat: "https://snapchat.com/add/veiakw",
   },
 
   navigation: [
