@@ -66,6 +66,7 @@ export function HeroCarousel({
             alt={t(b.imageAlt, locale)}
             fill
             priority={i === 0}
+            quality={92}
             sizes="100vw"
             className={cn("object-cover object-center", i === index && "motion-safe:animate-[zoom-slow_20s_ease-out_forwards]")}
           />

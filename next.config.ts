@@ -6,6 +6,9 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
+    // Default (75) plus a higher tier for hero/banner photography where
+    // compression artifacts are more visible at full-bleed sizes.
+    qualities: [75, 92],
     // Allow our own placeholder SVGs (trusted, first-party) through next/image.
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
