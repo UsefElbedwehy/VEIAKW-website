@@ -15,7 +15,7 @@ export default async function AdminSettingsPage({
     <div>
       <h1 className="mb-2 font-display text-3xl font-semibold uppercase tracking-[0.06em]">Settings</h1>
       <p className="mb-8 text-sm text-muted-foreground">
-        Branding, palette and feature flags. Saved to the remote config and applied storefront-wide.
+        Branding, palette, contact info and feature flags. Saved to the remote config and applied storefront-wide.
       </p>
       <SettingsForm
         initial={{
@@ -26,6 +26,11 @@ export default async function AdminSettingsPage({
           background: config.theme.colors.background,
           foreground: config.theme.colors.foreground,
           features: config.features as unknown as Record<string, boolean>,
+          email: config.contact.email ?? "",
+          phone: config.contact.phone ?? "",
+          whatsapp: config.contact.whatsapp ?? "",
+          instagram: config.social.instagram ?? "",
+          tiktok: config.social.tiktok ?? "",
         }}
       />
     </div>

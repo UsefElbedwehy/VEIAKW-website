@@ -12,6 +12,11 @@ export interface SettingsInitial {
   background: string;
   foreground: string;
   features: Record<string, boolean>;
+  email: string;
+  phone: string;
+  whatsapp: string;
+  instagram: string;
+  tiktok: string;
 }
 
 const COLORS: { key: keyof Pick<SettingsInitial, "primary" | "accent" | "background" | "foreground">; label: string }[] = [
@@ -76,6 +81,32 @@ export function SettingsForm({ initial }: { initial: SettingsInitial }) {
               </span>
             </label>
           ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="mb-3 text-sm font-bold uppercase tracking-wide">Contact &amp; social</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <label className="block">
+            <span className="mb-1 block text-xs font-medium text-muted-foreground">Email</span>
+            <input type="email" value={form.email} onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))} className={inputClass} />
+          </label>
+          <label className="block">
+            <span className="mb-1 block text-xs font-medium text-muted-foreground">Phone</span>
+            <input value={form.phone} onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))} dir="ltr" className={inputClass} />
+          </label>
+          <label className="block">
+            <span className="mb-1 block text-xs font-medium text-muted-foreground">WhatsApp</span>
+            <input value={form.whatsapp} onChange={(e) => setForm((f) => ({ ...f, whatsapp: e.target.value }))} dir="ltr" className={inputClass} />
+          </label>
+          <label className="block">
+            <span className="mb-1 block text-xs font-medium text-muted-foreground">Instagram URL</span>
+            <input value={form.instagram} onChange={(e) => setForm((f) => ({ ...f, instagram: e.target.value }))} dir="ltr" className={inputClass} />
+          </label>
+          <label className="block">
+            <span className="mb-1 block text-xs font-medium text-muted-foreground">TikTok URL</span>
+            <input value={form.tiktok} onChange={(e) => setForm((f) => ({ ...f, tiktok: e.target.value }))} dir="ltr" className={inputClass} />
+          </label>
         </div>
       </div>
 

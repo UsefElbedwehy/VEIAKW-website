@@ -1,10 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { Instagram, Music2, Facebook, Twitter, Youtube } from "lucide-react";
+import { Instagram, Music2, Facebook, Twitter, Youtube, Phone } from "lucide-react";
 import type { SiteConfig } from "@/config/types";
 import { t } from "@/lib/format";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export async function SiteFooter({
   config,
@@ -79,19 +80,29 @@ export async function SiteFooter({
           <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide">{tf("contactUs")}</h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>{config.contact.email}</li>
-            <li dir="ltr">{config.contact.phone}</li>
-            {config.contact.whatsapp && (
-              <li dir="ltr">
+            <li dir="ltr" className="flex items-center gap-2.5">
+              <span>{config.contact.phone}</span>
+              <span className="flex flex-col gap-1">
                 <a
-                  href={`https://wa.me/${config.contact.whatsapp.replace(/[^0-9]/g, "")}`}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="hover:text-primary"
+                  href={`tel:${config.contact.phone.replace(/[^0-9+]/g, "")}`}
+                  aria-label={tf("call")}
+                  className="text-muted-foreground hover:text-primary"
                 >
-                  {tf("whatsapp")}: {config.contact.whatsapp}
+                  <Phone className="size-3.5" strokeWidth={1.75} />
                 </a>
-              </li>
-            )}
+                {config.contact.whatsapp && (
+                  <a
+                    href={`https://wa.me/${config.contact.whatsapp.replace(/[^0-9]/g, "")}`}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={tf("whatsapp")}
+                    className="text-muted-foreground hover:text-primary"
+                  >
+                    <WhatsAppIcon className="size-3.5" />
+                  </a>
+                )}
+              </span>
+            </li>
             {config.contact.address && <li>{t(config.contact.address, locale)}</li>}
           </ul>
         </div>

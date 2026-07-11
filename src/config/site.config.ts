@@ -52,7 +52,7 @@ export const defaultSiteConfig: SiteConfig = {
 
   contact: {
     email: "care@thouqi.com",
-    phone: "+965 0000 0000",
+    phone: "+965 5168 9398",
     whatsapp: "+965 5168 9398",
     address: {
       en: "Kuwait City, Kuwait",

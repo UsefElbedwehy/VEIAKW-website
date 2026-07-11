@@ -85,6 +85,11 @@ const settingsSchema = z.object({
   background: z.string().regex(/^#[0-9a-fA-F]{6}$/),
   foreground: z.string().regex(/^#[0-9a-fA-F]{6}$/),
   features: z.record(z.string(), z.boolean()),
+  email: z.string().min(1),
+  phone: z.string().min(1),
+  whatsapp: z.string().optional().default(""),
+  instagram: z.string().optional().default(""),
+  tiktok: z.string().optional().default(""),
 });
 
 export async function saveSettingsAction(raw: unknown): Promise<AdminActionResult> {
@@ -103,6 +108,8 @@ export async function saveSettingsAction(raw: unknown): Promise<AdminActionResul
     foreground: d.foreground,
   };
   config.features = { ...config.features, ...(d.features as unknown as typeof config.features) };
+  config.contact = { ...config.contact, email: d.email, phone: d.phone, whatsapp: d.whatsapp || undefined };
+  config.social = { ...config.social, instagram: d.instagram || undefined, tiktok: d.tiktok || undefined };
 
   try {
     await writeAdminConfig(config);
