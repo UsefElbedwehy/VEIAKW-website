@@ -248,10 +248,11 @@ export const defaultSiteConfig: SiteConfig = {
     liveSearch: true,
   },
 
-  // Deployable without a gateway: only Cash on Delivery until the client's
-  // KNET/MyFatoorah key is added and online payment is switched on in admin.
+  // Online payment is switched on, but KNET/card only actually appear at
+  // checkout once a gateway key is on file (Admin > Payments) — until then
+  // this safely stays Cash on Delivery only. See resolveCheckoutMethods().
   payments: {
-    onlineEnabled: false,
+    onlineEnabled: true,
     methods: { cod: true, knet: true, card: true },
     provider: "myfatoorah",
   },
